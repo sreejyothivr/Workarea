@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Parrallel Testing]">
+  <test thread-count="5" parallel="methods" name="My Test100(failed)">
+    <parameter name="Browser" value="chrome"/>
+    <classes>
+      <class name="Testcases.ManageExpenseTestcase">
+        <methods>
+          <include name="Manageorders_search_btn_size"/>
+          <include name="beforemethod"/>
+          <include name="ManageordersResetButtonClrVaildation"/>
+          <include name="aftermethod"/>
+        </methods>
+      </class> <!-- Testcases.ManageExpenseTestcase -->
+    </classes>
+  </test> <!-- My Test100(failed) -->
+</suite> <!-- Failed suite [Parrallel Testing] -->
