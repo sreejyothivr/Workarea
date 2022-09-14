@@ -38,11 +38,11 @@ public class DashBoardTest extends BaseClass {
 		dp.clickMoreinfoManagePages();
 		List<String> tableheaders = dp.getTableValues();
 		List<String> expectedtableheaders = dp.expectedTablevalues();
-		boolean expectedvalue = true;
+		boolean expected = true;
 
-		boolean actualvalue = dp.comaprison();
+		boolean actual = dp.comaprison();
 
-		Assert.assertEquals(actualvalue, expectedvalue);
+		Assert.assertEquals(actual, expected);
 
 	}
 
