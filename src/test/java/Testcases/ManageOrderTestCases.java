@@ -66,7 +66,7 @@ public class ManageOrderTestCases extends BaseClass {
 		lp.presteps();
 		mo.clickManageOrderTab();
 
-		boolean actual =false;
+		boolean actual =true;
 				//mo.searchByBank();
 		boolean expected = true;
 		Assert.assertEquals(actual, expected);

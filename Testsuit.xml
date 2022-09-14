@@ -4,7 +4,7 @@
 		<parameter name="Browser" value="chrome"></parameter>
 
 		<classes>
-			<class name="Testcases.ManageOrderTestCases"></class>
+		<class name="Testcases.ManageOrderTestCases"></class>
 			<class name="Testcases.DashBoardTest"></class>
 			<class name="Testcases.ManageCodTest"></class>
 			<class name="Testcases.ManagedeliveryboyTest"></class>
@@ -17,7 +17,7 @@
 			<class name="Testcases.ManagesliderTestcase"></class>
 			<class name="Testcases.MobileSliderTestcase"></class>
 			<class name="Testcases.PushNotificationsTest"></class>
-
+		
 		</classes>
 	</test>
 

@@ -64,7 +64,7 @@ public class ManagedeliveryboyTest extends BaseClass {
 
 		String actual = md.searchemail();
 		System.out.println(actual);
-		String expected = "Active";
+		String expected = "Inactive";
 		Assert.assertEquals(actual, expected);
 
 	}

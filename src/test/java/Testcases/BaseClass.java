@@ -69,11 +69,11 @@ public class BaseClass {
 	@AfterMethod(alwaysRun = true)
 	public void aftermethod(ITestResult iTestResult) throws IOException {
 
-		//if (iTestResult.getStatus() == iTestResult.FAILURE) {
+		if (iTestResult.getStatus() == iTestResult.FAILURE) {
 			sc = new Screenshotcapture();
 			sc.Screenshotcapturefunc(driver, iTestResult.getName());
 
-	//	}
+	}
 		 driver.close();
 
 	}
