@@ -10,7 +10,7 @@ import ElementRepository.LoginPage;
 import Utilities.GeneralUtilities;
 import constants.Constant;
 
-public class DashBoardTest extends BaseClass {
+public class  DashBoardTest extends BaseClass {
 
 	GeneralUtilities go = new GeneralUtilities();
 	LoginPage lp;

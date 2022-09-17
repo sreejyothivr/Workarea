@@ -37,7 +37,7 @@ public class MobileSliderTestcase extends BaseClass {
 		mst.clickManagesliderTab();
 
 		boolean actual = mst.ListSliderDisplay();
-		System.out.println(actual);
+	
 		boolean expected = true;
 		Assert.assertEquals(actual, expected);
 
