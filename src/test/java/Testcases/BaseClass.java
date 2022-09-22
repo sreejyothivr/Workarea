@@ -40,9 +40,10 @@ public class BaseClass {
 					System.getProperty("user.dir") + prop.getProperty("chromeDriverPath"));
 
 			driver = new ChromeDriver();
-			driver.get(prop.getProperty("baseURL"));
-			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			/*
+			 * driver.get(prop.getProperty("baseURL")); driver.manage().window().maximize();
+			 * driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			 */
 		}
 
 		else if (browser.equals("firefox")) {
@@ -51,19 +52,24 @@ public class BaseClass {
 					System.getProperty("user.dir") + prop.getProperty("fireFoxBrowserDriverPath"));
 
 			driver = new FirefoxDriver();
-			driver.get(prop.getProperty("baseURL"));
-			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			/*
+			 * driver.get(prop.getProperty("baseURL")); driver.manage().window().maximize();
+			 * driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			 */
 		} else {
 			testBasic();
 			System.setProperty(prop.getProperty("edgeBrowserDriver"),
 					System.getProperty("user.dir") + prop.getProperty("edgeDriverPath"));
 
 			driver = new EdgeDriver();
-			driver.get(prop.getProperty("baseURL"));
-			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			/*
+			 * driver.get(prop.getProperty("baseURL")); driver.manage().window().maximize();
+			 * driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+			 */
 		}
+		driver.get(prop.getProperty("baseURL"));
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 
 	@AfterMethod(alwaysRun = true)
@@ -74,7 +80,7 @@ public class BaseClass {
 			sc.Screenshotcapturefunc(driver, iTestResult.getName());
 
 		}
-		// driver.close();
+		driver.close();
 
 	}
 }

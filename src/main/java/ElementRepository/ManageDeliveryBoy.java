@@ -24,6 +24,8 @@ public class ManageDeliveryBoy {
 
 	@FindBy(xpath = "//table[@class='table table-bordered table-hover table-sm']/tbody/tr[1]/td[7]/div/a\r\n")
 	WebElement tooltipele;
+	
+
 
 	@FindBy(xpath = "	//table[@class='table table-bordered table-hover table-sm']/tbody/tr[2]/td/div/div")
 	WebElement element1;
@@ -39,6 +41,8 @@ public class ManageDeliveryBoy {
 
 	@FindBy(xpath = "//table[@class='table table-bordered table-hover table-sm']/tbody/tr[1]/td[6]/a/span\r\n")
 	WebElement activestatus;
+	
+	
 
 	public String managadeliveryboytab() {
 
@@ -65,7 +69,7 @@ public class ManageDeliveryBoy {
 	public String searchemail() throws InterruptedException {
 		gu.clickElement(searchbtn);
 		gu.mediumDelay();
-		gu.sendKeysFunc(emailid, "sonu@gmail.com");
+		gu.sendKeysFunc(emailid, "abc@gmail.com");
 		gu.clickElement(searchbtn2);
 		String status = gu.getElementText(activestatus);
 		return (status);

@@ -20,7 +20,7 @@ public class PushNotificationsTest extends BaseClass {
 	LoginPage lp;
 	PushNotifications pn;
 
-	@Test
+	/*@Test
 
 	public void pushnotificationsTabValidation() throws InterruptedException {
 		pn = new PushNotifications(driver);
@@ -44,8 +44,8 @@ public class PushNotificationsTest extends BaseClass {
 		String actual = pn.displaycolor();
 		Assert.assertEquals(actual, expected, Constant.bgColorErrorMessage);
 	}
-
-	@Test(groups = { "Showstopper" })
+*/
+	@Test(groups = { "Showstopper" },retryAnalyzer = RetryTest.RetryAnalyzer.class)
 	public void AlertTextValidation() throws InterruptedException {
 		pn = new PushNotifications(driver);
 		lp = new LoginPage(driver);

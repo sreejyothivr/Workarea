@@ -2,9 +2,11 @@
 <suite name="CrossbrowserTesting2">
 	<test name="ChromeTest">
 		<parameter name="Browser" value="chrome"></parameter>
+		
 		<classes>
-			<class name="Testcases.ManageOrderTestCases">
-			</class>
+		<class name="Testcases.PushNotificationsTest"></class>
+			
+		
 		</classes>
 	</test>
 

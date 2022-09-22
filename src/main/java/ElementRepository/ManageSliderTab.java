@@ -41,6 +41,6 @@ public class ManageSliderTab {
 	public boolean imageDisplay() throws InterruptedException {
 		gu.mediumDelay();
 		gu.mediumDelay();
-		return gu.checkCheckBoxSelected(image);
+		return gu.elementDisplayed(image);
 	}
 }

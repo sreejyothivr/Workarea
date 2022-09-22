@@ -30,7 +30,7 @@ public class ManageCodTab {
 
 	}
 
-	public boolean checkRadioButtonSelected() {
+	public boolean isRadioButtonSelected() {
 		return gu.checkCheckBoxSelected(yesbtn);
 	}
 }

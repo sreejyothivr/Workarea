@@ -37,7 +37,7 @@ public class MobileSliderTestcase extends BaseClass {
 		mst.clickManagesliderTab();
 
 		boolean actual = mst.ListSliderDisplay();
-		System.out.println(actual);
+	
 		boolean expected = true;
 		Assert.assertEquals(actual, expected);
 
@@ -62,7 +62,7 @@ public class MobileSliderTestcase extends BaseClass {
 		lp.presteps();
 		mst.clickManagesliderTab();
 		String statusactual = mst.getbgclr();
-		String statusexpected = "rgba(40, 167, 69, 1)]";
+		String statusexpected = "rgba(40, 167, 69, 1)";
 		Assert.assertEquals(statusactual, statusexpected, "The image inot active");
 
 	}

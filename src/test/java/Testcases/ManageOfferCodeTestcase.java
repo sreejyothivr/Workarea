@@ -39,7 +39,7 @@ public class ManageOfferCodeTestcase extends BaseClass {
 		lp.presteps();
 		moc.clickmanageOfferCodetab();
 
-		String actual = moc.search("109");
+		String actual = moc.search("101");
 		String expected = "Active";
 		Assert.assertEquals(actual, expected, Constant.offer);
 
