@@ -45,7 +45,7 @@ public class PushNotificationsTest extends BaseClass {
 		Assert.assertEquals(actual, expected, Constant.bgColorErrorMessage);
 	}
 */
-	@Test(groups = { "Showstopper" })
+	@Test(groups = { "Showstopper" },retryAnalyzer = RetryTest.RetryAnalyzer.class)
 	public void AlertTextValidation() throws InterruptedException {
 		pn = new PushNotifications(driver);
 		lp = new LoginPage(driver);

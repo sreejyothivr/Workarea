@@ -17,7 +17,7 @@ public class ManageExpense {
 	}
 
 	@FindBy(xpath = "(//a[@class='nav-link'])[3]")
-	WebElement managaexpensetab;
+	private WebElement managaexpensetab;
 
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-expense']")
 	WebElement manageexpensesub;

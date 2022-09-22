@@ -3,6 +3,8 @@ package Testcases;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.sun.net.httpserver.Authenticator.Retry;
+
 import ElementRepository.LoginPage;
 import ElementRepository.ManageCodTab;
 import ElementRepository.ManageDeliveryBoy;
@@ -14,7 +16,7 @@ public class ManagedeliveryboyTest extends BaseClass {
 	ManageDeliveryBoy md;
 	LoginPage lp;
 	GeneralUtilities go = new GeneralUtilities();
-
+/*
 	@Test
 	public void restbtnValidation() {
 		lp = new LoginPage(driver);
@@ -42,7 +44,7 @@ public class ManagedeliveryboyTest extends BaseClass {
 
 	}
 
-	@Test
+	@Test()
 	public void elementpresentVal() throws InterruptedException {
 		lp = new LoginPage(driver);
 		md = new ManageDeliveryBoy(driver);
@@ -53,7 +55,7 @@ public class ManagedeliveryboyTest extends BaseClass {
 		boolean expected = true;
 		Assert.assertEquals(actual, expected);
 
-	}
+	}*/
 
 	@Test
 	public void searchVal() throws InterruptedException {
