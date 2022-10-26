@@ -14,7 +14,7 @@ public class Constant {
 	public static final String bgclr2 = "rgba(0, 123, 255, 1)";
 	public static final String bgclr3 = "rgba(23, 162, 184, 1)";
 	public static final String status = "Active";
-	public static final String push_success = "×\n" + "Alert!\n" + "Message send successfully";
+	public static final String push_success = "Ã—\n" + "Alert!\n" + "Message send successfully";
 	public static final String loc = "Golden villa";
 	public static final String offer = "The offer is inactive";
 	public static final String listexp = "List Sliders";
@@ -25,5 +25,5 @@ public class Constant {
 	public static final String titleqry = "The tilte is not as per the requirement";
 	public static final String imgnotdis = "Not Displayed";
 	public static final String alert_ntexp = "Not like as we expected";
-	public static final String pushexp = "Push Notifications";
+	public static final String pushexp = "Push Notificationsss";
 }
