@@ -143,7 +143,7 @@ public class GeneralUtilities {
 		a.dragAndDrop(source, destination).perform();
 	}
 
-	List<String> list1 = new ArrayList();
+ List<String> list1 = new ArrayList();
 
 	public List<String> addList(String values)
 
@@ -152,6 +152,16 @@ public class GeneralUtilities {
 		list1.add(values);
 		return (list1);
 	}
+	List<String> list14 = new ArrayList();
+	public List<String> addList2(List<String>list,String s) {
+		
+        list14.add(s);
+
+        return list14;
+    }
+	
+	
+	
 
 	public boolean getElementTextList(List<WebElement> actuallist, String element) {
 
@@ -203,5 +213,14 @@ public class GeneralUtilities {
 		// System.out.println(value);
 		return (value);
 	}
+	
+	public List getAllOptions(Select s) {
+
+		List<WebElement> op = s.getOptions();
+
+		return op;
+
+	}
+
 
 }

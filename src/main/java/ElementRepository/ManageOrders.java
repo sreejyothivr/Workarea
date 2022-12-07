@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 
 import Utilities.GeneralUtilities;
@@ -77,26 +78,41 @@ public class ManageOrders {
 		return (gu.getElementTextList(filterValues, "Bank"));
 	}
 
+	List<String> listu;
+
 	public String statusdropdwnTest(String value) throws InterruptedException {
 
 		String actual = gu.selectFuncbyVisibletext(statusdropdown, value);
+		listu = gu.addList(actual);
 		return actual;
-		
 
 	}
-	
-	public List<String> listOfExpectedValuesDropdown(){
-		List<String> list1 = new ArrayList();
-		gu.addList("Select");
-		gu.addList("Paid");
-		gu.addList("unpaid");
-		gu.addList("Delivered");
-		gu.addList("Out For Delivery");
-		System.out.println(list1);
-		return list1;
+
+	List<String> list2 = new ArrayList();
+
+	public List<String> listOfExpectedValuesDropdown() {
+		
+//		gu.addList("Select");
+//		gu.addList("Paid");
+//		gu.addList("unpaid");
+//		gu.addList("Delivered");
+//	    gu.addList("Out For Delivery");
+		// System.out.println(list12);
+		
+	        List<String> list1 = new ArrayList();
+	        list1=gu.addList2(list1,"Select");
+	        list1=gu.addList2(list1,"Paid");
+	        list1=gu.addList2(list1,"unpaid");
+	        list1=gu.addList2(list1,"Delivered");
+	        list1=gu.addList2(list1,"Out For Delivery");
+	        System.out.println(list1);
+	                return list1;
+
+	    
 	}
 
 	public void clickSearchbtn() {
 		gu.clickElement(searchbtn);
 	}
+
 }

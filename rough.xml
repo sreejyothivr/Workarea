@@ -4,7 +4,11 @@
 		<parameter name="Browser" value="chrome"></parameter>
 		
 		<classes>
-		<class name="Testcases.PushNotificationsTest"></class>
+		<class name="Testcases.ManageOrderTestCases">
+		<methods>
+		<include name="statusvalidation"/>
+		</methods>
+		</class>
 			
 		
 		</classes>

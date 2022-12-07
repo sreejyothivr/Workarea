@@ -1,5 +1,6 @@
 package ElementRepository;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,7 +16,6 @@ public class ManageExpense {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-
 	@FindBy(xpath = "(//a[@class='nav-link'])[3]")
 	private WebElement managaexpensetab;
 
@@ -27,6 +27,15 @@ public class ManageExpense {
 
 	@FindBy(xpath = "//a[@class='btn btn-rounded btn-warning']")
 	public WebElement resetbtn;
+	
+	@FindBy(xpath="//table[@class='table table-bordered table-hover table-sm']/tbody/tr[3]/td[9]/a[1]/i")
+	public WebElement editbutton;
+	
+	
+
+	@FindBy(xpath="//input[@class='form-control date']")
+	public WebElement datetextarea;
+	
 
 	public void clickManagaexpensetab() {
 		gu.clickElement(managaexpensetab);
@@ -58,5 +67,45 @@ public class ManageExpense {
 		String bgcolor = gu.stylePropertyValidation(newbtn, "background-color");
 		return bgcolor;
 
+	}
+	
+	public void clickeditbtn()
+	{
+		gu.clickElement(editbutton);
+	}
+	
+	public void datepicker() throws InterruptedException
+	{
+		 clickeditbtn();
+		 gu.clickElement(datetextarea);
+		 
+		 System.out.println(driver.findElement(By.xpath("//th[normalize-space()='October 2022']")).getText());
+		 
+		 gu.mediumDelay();
+			while(!driver.findElement(By.cssSelector("div[class='datepicker-days'] th[class='datepicker-switch']")).getText().contains("August 2021"))
+			{
+				
+			driver.findElement(By.xpath("//div[@class='datepicker-days']//th[@class='prev'][normalize-space()='«']")).click();
+			
+			}
+
+
+		//gu.mediumDelay();
+			//Grab common attribute//Put into list and iterate
+			int count=driver.findElements(By.xpath("//td[@class='day']")).size();
+
+			for(int i=0;i<count;i++)
+			{
+			String text=driver.findElements(By.className("//td[@class='day']")).get(i).getText();
+			if(text.equalsIgnoreCase("27"))
+			{
+			driver.findElements(By.className("//td[@class='day']")).get(i).click();
+			break;
+			}
+
+
+		}
+		 
+		
 	}
 }

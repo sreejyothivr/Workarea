@@ -6,11 +6,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.GeneralUtilities;
+import Utilities.RandomDataUtility;
 
 public class HomePage {
 
 	WebDriver driver;
 	GeneralUtilities gu = new GeneralUtilities();
+	RandomDataUtility rd= new RandomDataUtility();
 
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -25,7 +27,10 @@ public class HomePage {
 	WebElement abcd;// change it
 
 	public String displayProfileName() {
+	
 		return gu.getElementText(profileName);
+		
+		
 	}
 
 }

@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 import Utilities.ExcelRead;
 import Utilities.GeneralUtilities;
@@ -74,11 +76,12 @@ public class LoginPage {
 		List<String> excelList = excelUtility.readDataFromExcel("Sheet1");
 		return excelList;
 	}
-
+	
 	public void presteps() {
 		getUserName("admin");
 		getPassWord("admin");
 		clickSignin();
 	}
+	 
 
 }

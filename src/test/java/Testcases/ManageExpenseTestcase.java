@@ -58,5 +58,18 @@ public class ManageExpenseTestcase extends BaseClass {
 		Assert.assertEquals(actualbgSearch, ExpectedbgSearch, Constant.bgColorErrorMessage);
 
 	}
+	
+
+	@Test
+
+	public void calenderfunction() throws InterruptedException {
+		me = new ManageExpense(driver);
+		lp = new LoginPage(driver);
+		lp.presteps();
+		me.clickManagaexpensetab();
+		me.clickManagExpensesub();
+		me.datepicker();
+	}
+	
 
 }

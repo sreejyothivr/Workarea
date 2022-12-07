@@ -11,6 +11,6 @@ public class Constantmain {
 	public static final String	password="admin";
 	public static final String prize="prize is not as we expected";
 	public static final String alertmsg="Alert is not as we expected";
-	
+	//pull req
 	public static final String paymenttestcolor="rgba(31, 45, 61, 1)";
 }

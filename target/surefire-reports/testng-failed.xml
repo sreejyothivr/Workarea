@@ -4,13 +4,13 @@
   <test thread-count="5" name="ChromeTest(failed)" verbose="0">
     <parameter name="Browser" value="chrome"/>
     <classes>
-      <class name="Testcases.PushNotificationsTest">
+      <class name="Testcases.ManageExpenseTestcase">
         <methods>
           <include name="beforemethod"/>
-          <include name="AlertTextValidation"/>
           <include name="aftermethod"/>
+          <include name="calenderfunction"/>
         </methods>
-      </class> <!-- Testcases.PushNotificationsTest -->
+      </class> <!-- Testcases.ManageExpenseTestcase -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [CrossbrowserTesting2] -->

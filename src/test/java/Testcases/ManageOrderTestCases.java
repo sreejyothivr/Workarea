@@ -66,8 +66,7 @@ public class ManageOrderTestCases extends BaseClass {
 		lp.presteps();
 		mo.clickManageOrderTab();
 
-		boolean actual =true;
-				//mo.searchByBank();
+		boolean actual =mo.searchByBank();
 		boolean expected = true;
 		Assert.assertEquals(actual, expected);
 
@@ -76,7 +75,7 @@ public class ManageOrderTestCases extends BaseClass {
 
 	@DataProvider (name = "data-provider")
 	public Object[][] dpMethod(){
-		return new Object[][]{{"Select" }, { "Paid" } };
+		return new Object[][]{{"Select" }, { "Paid2" } ,{"Delivered"}};
 	}
 
 
@@ -86,12 +85,16 @@ public class ManageOrderTestCases extends BaseClass {
 		lp = new LoginPage(driver);
 		lp.presteps();
 		mo.clickManageOrderTab();
+		
 		mo.clickSearchbtn();
 		String actual =mo.statusdropdwnTest(value);
+	
 		List<String> expected =mo.listOfExpectedValuesDropdown();
+		System.out.println(expected);
 		for(int i=0;i<expected.size();i++) {
 			Assert.assertEquals(actual, expected.get(i), "dropdown values not expected");
-		}
+			
+		}System.out.println("executed");
 
 		
 

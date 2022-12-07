@@ -78,9 +78,10 @@ public class BaseClass {
 		if (iTestResult.getStatus() == iTestResult.FAILURE) {
 			sc = new Screenshotcapture();
 			sc.Screenshotcapturefunc(driver, iTestResult.getName());
+			
 
 		}
-		driver.close();
+		//driver.close();
 
 	}
 }

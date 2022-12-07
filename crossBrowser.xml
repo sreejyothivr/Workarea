@@ -15,6 +15,7 @@
 			</class>
 		</classes>
 	</test>
+	//pull req
 
 	<test name="EdgeTest">
 		<parameter name="Browser" value="edge"></parameter>
